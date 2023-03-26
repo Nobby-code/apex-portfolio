@@ -713,6 +713,7 @@
 .contacts{
   background-color: #76b5c5;
   background-color: #2596be;
+  margin: 0;
 }
 .contacts-header {
   height: 36px;
@@ -784,7 +785,7 @@
   height: 55px;
   margin: 5px;
   font-size: 18px;
-  background-color: #333;
+  background-color: rgb(78, 71, 71);
   color: white;
   border: none;
   border: none;
@@ -806,6 +807,7 @@ textarea {
   font-size: 18px;
   margin: 5px;
   background-color: #333;
+  background-color: rgb(78, 71, 71);
   color: white;
   border: none;
 }
@@ -1211,4 +1213,10 @@ textarea {
   color: black;
   text-align: center;
   font-weight: bold;
+}
+
+.footer img {
+  padding: 10px;
+  height: 60px;
+  width: 50px;
 }

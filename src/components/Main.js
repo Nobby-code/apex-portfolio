@@ -21,10 +21,7 @@ import Supplies from '../Images/officeSupplies.jpg'
 import Public from '../Images/publicRelations.jpg'
 import Profile2 from '../Images/profile.jpg'
 import Logo2 from '../Images/logo2.png'
-// import {
-//     FaFacebook, FaTwitter, FaInstagram, FaDownload, FaHistory, FaProjectDiagram, FaCode, FaThumbsUp, FaBrain, FaPhoneAlt,
-//     FaEnvelope, FaMapMarker, FaBars, FaTimes
-// } from 'react-icons/fa'
+import { FaPhoneAlt, FaEnvelope, FaMapMarker } from 'react-icons/fa'
 // import { faBullseye } from '@fortawesome/free-solid-svg-icons';
 
 const Main = () => {
@@ -62,7 +59,7 @@ const Main = () => {
     useEffect(() => {
         // console.log(scroll)
 
-        if (scroll.y > 100){
+        if (scroll.y > 100) {
             setShownav(true)
         } else {
             setShownav(false)
@@ -70,13 +67,13 @@ const Main = () => {
     }, [scroll])
 
     useEffect(() => {
-        AOS.init({duration: 1500})
+        AOS.init({ duration: 1500 })
     }, []);
 
     //Toggle menu
     const [activeMenu, setActiveMenu] = useState(false);
 
-   
+
 
     function handleAbout() {
         aboutRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -98,7 +95,7 @@ const Main = () => {
 
     return (
         <div className='container'>
-            <div className={shownav ? 'my-header hideHeader': 'my-header'}>
+            <div className={shownav ? 'my-header hideHeader' : 'my-header'}>
                 <div className='logo-and-bar'>
                     <button className='bars'
                         onClick={() => setActiveMenu(!activeMenu)}>
@@ -107,7 +104,7 @@ const Main = () => {
                     </button>
                     {/* <div>Logo</div> */}
                     <div className="my-logo">
-                        <img src={Logo2}/>
+                        <img src={Logo2} />
                         <p>APEX EAGLE ENTERPRISE LIMITED</p>
                     </div>
                 </div>
@@ -169,7 +166,7 @@ const Main = () => {
                             <li><a href="https://twitter.com/home" target="_blank" rel="noreferrer"><em><FaTwitter /></em><span>Twitter</span></a></li>
                             <li><a href="https://www.instagram.com/?utm_source=op_m_sd" target="_blank" rel="noreferrer"><em><FaInstagram /></em><span>Instagram</span></a></li>
                         </ul> */}
-                        <img src={Profile2} data-aos="zoom-in" alt=''/>
+                        <img src={Profile2} data-aos="zoom-in" alt='' />
                     </div>
                 </div>
                 <div className='profile-image'>
@@ -177,32 +174,203 @@ const Main = () => {
                     <img src={Communication} />
                     <img src={Public} /> */}
                     <Swiper
-                      modules={[Navigation, EffectFade, Pagination, Autoplay]}
-                      navigation
-                      autoplay={true}
-                      effect='fade'
-                      speed={2000}
-                      slidesPerView={2}
-                      loop
-                      pagination={{clickable: true}}
+                        modules={[Navigation, EffectFade, Pagination, Autoplay]}
+                        navigation
+                        autoplay={true}
+                        effect='fade'
+                        speed={2000}
+                        slidesPerView={2}
+                        loop
+                        pagination={{ clickable: true }}
                     //   className='profile-image'
                     >
                         <SwiperSlide className='my-slider'>
                             <h3>Office Supplies</h3>
-                            <img src={Supplies} alt=''/>
+                            <img src={Supplies} alt='' />
                         </SwiperSlide>
                         <SwiperSlide className='my-slider'>
                             <h3>Stakeholder Engagement</h3>
-                            <img src={Communication} alt=''/>
+                            <img src={Communication} alt='' />
                         </SwiperSlide>
                         <SwiperSlide className='my-slider'>
                             <h3>Policy Communication</h3>
-                            <img src={Public} alt=''/>
+                            <img src={Public} alt='' />
                         </SwiperSlide>
                     </Swiper>
                 </div>
             </div>
 
+
+            <div ref={resumeRef} className="page resume">
+                <h4 className='resume-header'>Our Solutions</h4>
+                <div className='sol'>
+                    <div className='solutions'>
+                        <div className='solution-details'>
+                            <h3>CORPORATE COMMUNICATIONS</h3>
+                            <p>
+                                We help businesses communicate effectively with
+                                their employees, shareholders, and other
+                                stakeholders. It includes creating messaging,
+                                handling internal communications, and managing
+                                public-facing announcements
+                            </p>
+                        </div>
+
+                        <img src={Communication} alt="" data-aos="slide-up" />
+                    </div>
+                    <div className='horizontal'></div>
+                    <div className='solutions'>
+                        <img src={Brand} alt="" data-aos="slide-right" />
+                        <div className='solution-details' data-aos="zoom-in">
+                            <h3>BRAND & IMAGE MANAGEMENT</h3>
+                            <p>
+                                Apex focuses on building and maintaining a positive
+                                image and reputation for a brand. It includes creating
+                                a brand strategy, developing brand guidelines, and
+                                managing brand communication across various
+                                channels.
+                            </p>
+                        </div>
+                    </div>
+                    <div className='horizontal1'></div>
+                    <div className='solutions' data-aos="zoom-in">
+                        <div className='solution-details'>
+                            <h3>DIGITAL MARKETING</h3>
+                            <p>
+                                Apex helps businesses reach their target audience
+                                through online channels such as social media, search
+                                engines, and email marketing. It includes creating
+                                digital advertising campaigns, managing social media
+                                accounts, and developing content marketing
+                                strategies.
+                            </p>
+                        </div>
+
+                        <img src={Digital} alt="" />
+                    </div>
+                    <div className='horizontal'></div>
+                    <div className='solutions'>
+                        <img src={Public} alt="" />
+                        <div className='solution-details'>
+                            <h3>MEDIA RELATIONS & MOBILIZATION
+                            </h3>
+                            <p>
+                                Apex helps businesses interact with the media and
+                                mobilize their audiences to achieve their
+                                communication goals. It includes developing media
+                                relations strategies, conducting media outreach, and
+                                organizing media events.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div className='horizontal'></div>
+                    <div className='solutions'>
+                        <div className='solution-details'>
+                            <h3>POLICY COMMUNICATION</h3>
+                            <p>
+                                We help businesses communicate their policy
+                                positions to various stakeholders, including
+                                government officials, industry associations, and the
+                                public. It includes developing policy positions,
+                                creating advocacy strategies, and organizing
+                                advocacy campaigns.
+                            </p>
+                        </div>
+
+                        <img src={Communication} alt='' />
+                    </div>
+                    <div className='horizontal'></div>
+                    <div className='solutions'>
+                        <img src={Public} alt='' />
+                        <div className='solution-details'>
+                            <h3>PUBLIC RELATIONS & STAKEHOLDER
+                                ENGAGEMENT</h3>
+                            <p>
+                                Apex helps businesses build and maintain
+                                relationships with their stakeholders, including
+                                customers, employees, investors, and the media. It
+                                includes developing communication strategies,
+                                creating engaging content, and managing
+                                stakeholder relationships.
+                            </p>
+                        </div>
+                    </div>
+                    <div className='horizontal'></div>
+                    <div className='solutions'>
+                        <div className='solution-details'>
+                            <h3>CONSUMER MARKETING</h3>
+                            <p>
+                                Apex helps businesses promote their products and
+                                services to consumers through various marketing
+                                channels, including advertising, promotions, and
+                                content marketing. It includes developing marketing
+                                strategies, creating marketing materials, and
+                                managing marketing campaigns.
+                            </p>
+                        </div>
+
+                        <img src={Marketing} alt='' />
+                    </div>
+                    <div className='horizontal'></div>
+                    <div className='solutions'>
+                        <img src={Etiquette} alt='' />
+                        <div className='solution-details'>
+                            <h3>ETIQUETTE TRAINING</h3>
+                            <p>
+                                We help individuals and businesses learn how to
+                                behave professionally in various social and business
+                                situations. It includes teaching proper etiquette for
+                                networking, business meetings, and social events.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div className='horizontal'></div>
+                    <div className='solutions'>
+                        <div className='solution-details'>
+                            <h3>EVENT MANAGEMENT</h3>
+                            <p>
+                                Apex helps businesses plan and execute events,
+                                including conferences, product launches, and
+                                corporate parties. It includes event planning,
+                                budgeting, and execution, as well as coordinating
+                                with vendors and managing logistics.
+                            </p>
+                        </div>
+
+                        <img src={Event} alt='' />
+                    </div>
+                    <div className='horizontal'></div>
+                    <div className='solutions' data-aos="zoom-out">
+                        <img src={Food} alt='' />
+                        <div className='solution-details'>
+                            <h3>FOODSTUFFS SUPPLIES
+                            </h3>
+                            <p>
+                                Non-perishable foods, also known as "shelf-stable"
+                                foods, are items that can be safely stored at room
+                                temperature. In order for perishable foods such as
+                                vegetables to become non-perishable, they need to
+                                be dried or treated by heat to destroy any foodborne
+                                bugs that could lead to spoilage or cause an illness.
+                                Then, this food can be packaged in sterile, airtight
+                                containers such as cans. It's worth noting that
+                                preservation of these items is crucial; all foods will
+                                eventually spoil if they have not been properly
+                                preserved. No matter where you live, what your
+                                financial situation looks like, or how safe you think
+                                your home is, it never hurts to stock up on all the
+                                items on a basic list of non-perishable foods.
+                            </p>
+                        </div>
+                    </div>
+                    <div className='horizontal'></div>
+                </div>
+            </div>
+            {/* <div ref={techRef} className="page">
+                Technologies
+            </div> */}
             <div ref={aboutRef} className="about page">
                 {/* <h4 className='about-header'>Our Highlights</h4> */}
                 <div className='about-div'>
@@ -307,322 +475,6 @@ const Main = () => {
 
             </div>
 
-
-            <div ref={resumeRef} className="page resume">
-                <h4 className='resume-header'>Our Solutions</h4>
-                {/* <div className='resume-content'>
-                    <div className='resume-list'>
-                        <div className='resume-icons'>
-                            <ul>
-                                <li><FaCode /></li>
-                                <li><FaProjectDiagram /></li>
-                                <li><FaHistory /></li>
-                                <li><FaThumbsUp /></li>
-                                <li><FaBrain /></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <ul>
-                                <li><button onClick={handleProg}>Programming Skills</button></li>
-                                <li><button onClick={handleProjects}>Projects</button></li>
-                                <li><button onClick={handleWork}>Work History</button></li>
-                                <li><button onClick={handleInterests}>Interests</button></li>
-                                <li><button onClick={handleSofts}>Soft Skills</button></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className='vertical'></div>
-                    <div className='resume-list-content'>
-                        {isProg ?
-                            <div className='skills'>
-                                <div className='skill-specific'>
-                                    <p>Javascript</p>
-                                    <div className='js'></div>
-                                </div>
-                                <div className='skill-specific'>
-                                    <p>React Js</p>
-                                    <div className='react'></div>
-                                </div>
-                                <div className='skill-specific'>
-                                    <p>Node Js</p>
-                                    <div className='node'></div>
-                                </div>
-                                <div className='skill-specific'>
-                                    <p>HTML</p>
-                                    <div className='html'></div>
-                                </div>
-                                <div className='skill-specific'>
-                                    <p>CSS</p>
-                                    <div className='css'></div>
-                                </div>
-                                <div className='skill-specific'>
-                                    <p>SQL</p>
-                                    <div className='sql'></div>
-                                </div>
-
-                            </div>
-                            :
-                            null
-                        }
-                        <div>
-                            {isProject ?
-                                <div className='projects'>
-                                    <div className='specific-project'>
-                                        <h3> Portfolio Website Personal</h3>
-                                        <h5>Technologies used: React Js, Mail Js, HTML and CSS</h5>
-                                        <p>A personal Portfolio Website to showcase my personal information and all he projects that I have done in one place</p>
-                                    </div>
-                                    <div className='specific-project'>
-                                        <h3>Gym Fitness Website</h3>
-                                        <h5>Technologies used: React Js, Mail Js, HTML and CSS</h5>
-                                        <p>This website is to showcase the quality services offered at the gym</p>
-                                    </div>
-                                    <div className='specific-project'>
-                                        <h3> E-commerce Auction Web Application</h3>
-                                        <h5>Technologies used: React Js, Mail Js,Node Js, SQL, HTML and CSS</h5>
-                                        <p>This was a school project for my final year</p>
-                                    </div>
-                                </div>
-                                :
-                                null
-                            }
-                        </div>
-                        <div>
-                            {isWork ?
-                                <div className='work-history'>
-                                    <div>
-                                        <h4>Developed gym website for a client with mailing functionality and other forms of communication
-                                            as per the client's requirement
-                                            <span>2022</span>
-                                        </h4>
-                                    </div>
-                                    <div>
-                                        <h4>United States International University-Africa (USIU) - Intern <span>2022</span></h4>
-                                        <h5>Role: ICT Support</h5>
-                                        <p>Here, I provided ICT support survices like:</p>
-                                        <ul>
-                                            <li>Network troubleshoot</li>
-                                            <li>Hardware repair and maintenance</li>
-                                            <li>Software installation and troublshoot</li>
-                                            <li>Data recovery using Acronis software</li>
-                                            <li>Hybrid audio-visual class setup</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                :
-                                null
-                            }
-                        </div>
-                        <div>
-                            {isInterests ?
-                                <div className='interests'>
-                                    <div className='specific-interest'>
-                                        <h3>Teaching</h3>
-                                        <p>Apart from being a tech enthusiast and a code writer, I also love to share with others the content I have because I believe in sharing</p>
-
-                                    </div>
-                                    <div className='specific-interest'>
-                                        <h3>Music</h3>
-                                        <p>Music is the best stress reliever. I love listening to music while hands on, or when I'm tired. I love Afro Bit music and some locals</p>
-
-                                    </div>
-                                    <div className='specific-interest'>
-                                        <h3>Football</h3>
-                                        <p>I love watching football matches, especially English premier League and Champions League. I'm a Chelsea FC fan</p>
-
-                                    </div>
-                                </div>
-                                :
-                                null
-                            }
-                        </div>
-                        <div>
-                            {isSoft ?
-                                <div className='soft-skills'>
-                                    <ul>
-                                        <li>Communication</li>
-                                        <li>Teamwork</li>
-                                        <li>Time management</li>
-                                        <li>Leadership</li>
-                                        <li>Problem solving</li>
-                                        <li>Openness to criticism</li>
-                                        <li>Critical thinking</li>
-                                        <li>Decision maaking</li>
-                                    </ul>
-                                </div>
-                                : null
-                            }
-                        </div>
-                    </div>
-                </div> */}
-                <div className='sol'>
-                    <div className='solutions'>
-                        <div className='solution-details'>
-                            <h3>CORPORATE COMMUNICATIONS</h3>
-                            <p>
-                                We help businesses communicate effectively with
-                                their employees, shareholders, and other
-                                stakeholders. It includes creating messaging,
-                                handling internal communications, and managing
-                                public-facing announcements
-                            </p>
-                        </div>
-
-                        <img src={Communication} alt="" data-aos="slide-up"/>
-                    </div>
-                    <div className='horizontal'></div>
-                    <div className='solutions'>
-                        <img src={Brand} alt="" data-aos="slide-right"/>
-                        <div className='solution-details' data-aos="zoom-in">
-                            <h3>BRAND & IMAGE MANAGEMENT</h3>
-                            <p>
-                                Apex focuses on building and maintaining a positive
-                                image and reputation for a brand. It includes creating
-                                a brand strategy, developing brand guidelines, and
-                                managing brand communication across various
-                                channels.
-                            </p>
-                        </div>
-                    </div>
-                    <div className='horizontal1'></div>
-                    <div className='solutions' data-aos="zoom-in">
-                        <div className='solution-details'>
-                            <h3>DIGITAL MARKETING</h3>
-                            <p>
-                                Apex helps businesses reach their target audience
-                                through online channels such as social media, search
-                                engines, and email marketing. It includes creating
-                                digital advertising campaigns, managing social media
-                                accounts, and developing content marketing
-                                strategies.
-                            </p>
-                        </div>
-
-                        <img src={Digital} alt="" />
-                    </div>
-                    <div className='horizontal'></div>
-                    <div className='solutions'>
-                        <img src={Public} alt="" />
-                        <div className='solution-details'>
-                            <h3>MEDIA RELATIONS & MOBILIZATION
-                            </h3>
-                            <p>
-                                Apex helps businesses interact with the media and
-                                mobilize their audiences to achieve their
-                                communication goals. It includes developing media
-                                relations strategies, conducting media outreach, and
-                                organizing media events.
-                            </p>
-                        </div>
-
-                    </div>
-                    <div className='horizontal'></div>
-                    <div className='solutions'>
-                        <div className='solution-details'>
-                            <h3>POLICY COMMUNICATION</h3>
-                            <p>
-                                We help businesses communicate their policy
-                                positions to various stakeholders, including
-                                government officials, industry associations, and the
-                                public. It includes developing policy positions,
-                                creating advocacy strategies, and organizing
-                                advocacy campaigns.
-                            </p>
-                        </div>
-
-                        <img src={Communication} alt=''/>
-                    </div>
-                    <div className='horizontal'></div>
-                    <div className='solutions'>
-                        <img src={Public} alt=''/>
-                        <div className='solution-details'>
-                            <h3>PUBLIC RELATIONS & STAKEHOLDER
-                                ENGAGEMENT</h3>
-                            <p>
-                                Apex helps businesses build and maintain
-                                relationships with their stakeholders, including
-                                customers, employees, investors, and the media. It
-                                includes developing communication strategies,
-                                creating engaging content, and managing
-                                stakeholder relationships.
-                            </p>
-                        </div>
-                    </div>
-                    <div className='horizontal'></div>
-                    <div className='solutions'>
-                        <div className='solution-details'>
-                            <h3>CONSUMER MARKETING</h3>
-                            <p>
-                                Apex helps businesses promote their products and
-                                services to consumers through various marketing
-                                channels, including advertising, promotions, and
-                                content marketing. It includes developing marketing
-                                strategies, creating marketing materials, and
-                                managing marketing campaigns.
-                            </p>
-                        </div>
-
-                        <img src={Marketing} alt='' />
-                    </div>
-                    <div className='horizontal'></div>
-                    <div className='solutions'>
-                        <img src={Etiquette} alt=''/>
-                        <div className='solution-details'>
-                            <h3>ETIQUETTE TRAINING</h3>
-                            <p>
-                                We help individuals and businesses learn how to
-                                behave professionally in various social and business
-                                situations. It includes teaching proper etiquette for
-                                networking, business meetings, and social events.
-                            </p>
-                        </div>
-
-                    </div>
-                    <div className='horizontal'></div>
-                    <div className='solutions'>
-                        <div className='solution-details'>
-                            <h3>EVENT MANAGEMENT</h3>
-                            <p>
-                                Apex helps businesses plan and execute events,
-                                including conferences, product launches, and
-                                corporate parties. It includes event planning,
-                                budgeting, and execution, as well as coordinating
-                                with vendors and managing logistics.
-                            </p>
-                        </div>
-
-                        <img src={Event} alt=''/>
-                    </div>
-                    <div className='horizontal'></div>
-                    <div className='solutions' data-aos="zoom-out">
-                        <img src={Food} alt=''/>
-                        <div className='solution-details'>
-                            <h3>FOODSTUFFS SUPPLIES
-                            </h3>
-                            <p>
-                                Non-perishable foods, also known as "shelf-stable"
-                                foods, are items that can be safely stored at room
-                                temperature. In order for perishable foods such as
-                                vegetables to become non-perishable, they need to
-                                be dried or treated by heat to destroy any foodborne
-                                bugs that could lead to spoilage or cause an illness.
-                                Then, this food can be packaged in sterile, airtight
-                                containers such as cans. It's worth noting that
-                                preservation of these items is crucial; all foods will
-                                eventually spoil if they have not been properly
-                                preserved. No matter where you live, what your
-                                financial situation looks like, or how safe you think
-                                your home is, it never hurts to stock up on all the
-                                items on a basic list of non-perishable foods.
-                            </p>
-                        </div>
-                    </div>
-                    <div className='horizontal'></div>
-                </div>
-            </div>
-            {/* <div ref={techRef} className="page">
-                Technologies
-            </div> */}
             <div ref={contRef} className="contacts page">
                 {/* <h3 className='contacts-header'>Contacts</h3> */}
                 <h4 className='contact-header'>Contact Us</h4>
@@ -631,9 +483,9 @@ const Main = () => {
                         <h2>For Enquiries, please get in touch with us...</h2>
                         <div className='my-contact'>
                             <ul className='my-contact-icons'>
-                                {/* <li><FaPhoneAlt /></li>
+                                <li><FaPhoneAlt /></li>
                                 <li><FaEnvelope /></li>
-                                <li><FaMapMarker /></li> */}
+                                <li><FaMapMarker /></li>
                             </ul>
                             <ul>
                                 <li>0733644025</li>
@@ -661,7 +513,10 @@ const Main = () => {
                     </div>
                 </div>
             </div>
-            <div className='footer'>Apex Eagle Enterprise Limited @copy; 2023</div>
+            <div className='footer'>
+                <img src={Logo2} alt="" />
+                <p>Apex Eagle Enterprise Limited @copy; 2023</p>
+            </div>
             <button onClick={() => window.scrollTo({
                 left: 0,
                 top: 0,
