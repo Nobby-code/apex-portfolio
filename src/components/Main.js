@@ -104,7 +104,7 @@ const Main = () => {
                     </button>
                     {/* <div>Logo</div> */}
                     <div className="my-logo">
-                        <img src={Logo2} />
+                        <img src={Logo2} alt='' />
                         <p>APEX EAGLE ENTERPRISE LIMITED</p>
                     </div>
                 </div>
@@ -383,9 +383,45 @@ const Main = () => {
                     <div className='horizontal'></div>
                 </div>
             </div>
-            {/* <div ref={techRef} className="page">
-                Technologies
-            </div> */}
+
+            <div ref={contRef} className="contacts page">
+                {/* <h3 className='contacts-header'>Contacts</h3> */}
+                <h4 className='contact-header'>Contact Us</h4>
+                <div className='contacts-content'>
+                    <div className='first-cont-info'>
+                        <h2>For Enquiries, please get in touch with us...</h2>
+                        <div className='my-contact'>
+                            <ul className='my-contact-icons'>
+                                <li><FaPhoneAlt /></li>
+                                <li><FaEnvelope /></li>
+                                <li><FaMapMarker /></li>
+                            </ul>
+                            <ul>
+                                <li>0733644025</li>
+                                <li>apexeagleltd@gmail.com</li>
+                                <li>P.O Box 8645-00100, Nairobi, Kenya</li>
+                            </ul>
+                        </div>
+                        {/* <h3 className='sites-header'>Social sites:</h3> */}
+                        {/* <ul className='social-links'>
+            <li><a href='#' target="_blank" rel="noreferrer"><em><FaFacebook /></em><span>Facebook</span></a></li>
+            <li><a href='#' target="_blank" rel="noreferrer"><em><FaTwitter /></em><span>Twitter</span></a></li>
+            <li><a href='#' target="_blank" rel="noreferrer"><em><FaInstagram /></em><span>Instagram</span></a></li>
+        </ul> */}
+                    </div>
+                    <div className='mailing'>
+                        <h3>Please mail us here</h3>
+                        <form className="contacts-form">
+                            <input type='text' placeholder='Name' required /> <br />
+                            <input type='text' placeholder='Subject' required /> <br />
+                            <input type='email' placeholder='Email' required /> <br />
+                            <textarea cols='50' rows='8' placeholder='Message...' required /> <br />
+                            <button className="contacts-button">Submit</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
             <div ref={aboutRef} className="about page">
                 {/* <h4 className='about-header'>Our Highlights</h4> */}
                 <div className='about-div'>
@@ -490,53 +526,49 @@ const Main = () => {
 
             </div>
 
-            <div ref={contRef} className="contacts page">
-                {/* <h3 className='contacts-header'>Contacts</h3> */}
-                <h4 className='contact-header'>Contact Us</h4>
-                <div className='contacts-content'>
-                    <div className='first-cont-info'>
-                        <h2>For Enquiries, please get in touch with us...</h2>
-                        <div className='my-contact'>
-                            <ul className='my-contact-icons'>
-                                <li><FaPhoneAlt /></li>
-                                <li><FaEnvelope /></li>
-                                <li><FaMapMarker /></li>
-                            </ul>
-                            <ul>
-                                <li>0733644025</li>
-                                <li>apexeagleltd@gmail.com</li>
-                                <li>P.O Box 8645-00100, Nairobi, Kenya</li>
-                            </ul>
-                        </div>
-                        {/* <h3 className='sites-header'>Social sites:</h3> */}
-                        {/* <ul className='social-links'>
-                            <li><a href='#' target="_blank" rel="noreferrer"><em><FaFacebook /></em><span>Facebook</span></a></li>
-                            <li><a href='#' target="_blank" rel="noreferrer"><em><FaTwitter /></em><span>Twitter</span></a></li>
-                            <li><a href='#' target="_blank" rel="noreferrer"><em><FaInstagram /></em><span>Instagram</span></a></li>
-                        </ul> */}
+            <div className='footer'>
+                <div className='footer-div'>
+                    <div className="my-logo">
+                        <img src={Logo2} alt='' />
+                        <p>APEX EAGLE ENTERPRISE LIMITED</p>
                     </div>
-                    <div className='mailing'>
-                        <h3>Please mail us here</h3>
-                        <form className="contacts-form">
-                            <input type='text' placeholder='Name' required /> <br />
-                            <input type='text' placeholder='Subject' required /> <br />
-                            <input type='email' placeholder='Email' required /> <br />
-                            <textarea cols='50' rows='8' placeholder='Message...' required /> <br />
-                            <button className="contacts-button">Submit</button>
-                        </form>
 
+                    <div className='personal-det'>
+                        <h3 className='name main-name'>COMPANY OVERVIEW</h3>
+                        <br />
+                        <div className='o-view'>
+                            <div>
+                                <div>
+                                    <h4 className='name'><span>Company Name: </span>Apex Eagle Enterprises Limited</h4>
+                                </div>
+                                <br />
+                                <div>
+                                    <h4 className='name'><span>Business Address: </span>P.O BOX 8645-00100, Nairobi, Kenya</h4>
+                                </div>
+                                <br />
+                                <div>
+                                    <h4 className='name'><span>Tel: </span>0733644025</h4>
+                                </div>
+                                <br />
+                                <div>
+                                    <h3 className='name'><span>Email: </span>apexeagleltd@gmail.com</h3>
+                                </div>
+                                <br />
+                                <div>
+                                    <h3 className='name'><span>website: </span>www.apexeagle.com</h3>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <button onClick={() => window.scrollTo({
+                    left: 0,
+                    top: 0,
+                    behavior: 'smooth',
+                })} className='scroll-top' >scroll to top
+                </button>
+                <p className='footer-bottom'>Apex Eagle Enterprise Limited &copy; Copyright 2023</p>
             </div>
-            <div className='footer'>
-                <img src={Logo2} alt="" />
-                <p>Apex Eagle Enterprise Limited @copy; 2023</p>
-            </div>
-            <button onClick={() => window.scrollTo({
-                left: 0,
-                top: 0,
-                behavior: 'smooth',
-            })} className='scroll-top'>scroll to top</button>
         </div>
     )
 }
