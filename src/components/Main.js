@@ -21,7 +21,7 @@ import Supplies from '../Images/officeSupplies.jpg'
 import Public from '../Images/publicRelations.jpg'
 import Profile2 from '../Images/profile.jpg'
 import Logo2 from '../Images/logo2.png'
-import { FaPhoneAlt, FaEnvelope, FaMapMarker } from 'react-icons/fa'
+import { FaPhoneAlt, FaEnvelope, FaMapMarker, FaTimes, FaBars } from 'react-icons/fa'
 // import { faBullseye } from '@fortawesome/free-solid-svg-icons';
 
 const Main = () => {
@@ -99,7 +99,7 @@ const Main = () => {
                 <div className='logo-and-bar'>
                     <button className='bars'
                         onClick={() => setActiveMenu(!activeMenu)}>
-                        {/* {activeMenu ? <FaTimes /> : <FaBars />} */}
+                        {activeMenu ? <FaTimes /> : <FaBars />}
 
                     </button>
                     {/* <div>Logo</div> */}
@@ -215,12 +215,15 @@ const Main = () => {
                                 public-facing announcements
                             </p>
                         </div>
-
-                        <img src={Communication} alt="" data-aos="slide-up" />
+                        <div className='img-div'>
+                            <img src={Communication} alt="" data-aos="slide-up" />
+                        </div>
                     </div>
                     <div className='horizontal'></div>
-                    <div className='solutions'>
-                        <img src={Brand} alt="" data-aos="slide-right" />
+                    <div className='solutions solution-rev'>
+                        <div className='img-div'>
+                            <img src={Brand} alt="" data-aos="slide-right" />
+                        </div>
                         <div className='solution-details' data-aos="zoom-in">
                             <h3>BRAND & IMAGE MANAGEMENT</h3>
                             <p>
@@ -245,12 +248,15 @@ const Main = () => {
                                 strategies.
                             </p>
                         </div>
-
-                        <img src={Digital} alt="" />
+                        <div className='img-div'>
+                            <img src={Digital} alt="" />
+                        </div>
                     </div>
                     <div className='horizontal'></div>
-                    <div className='solutions'>
-                        <img src={Public} alt="" />
+                    <div className='solutions solution-rev'>
+                        <div className='img-div'>
+                            <img src={Public} alt="" />
+                        </div>
                         <div className='solution-details'>
                             <h3>MEDIA RELATIONS & MOBILIZATION
                             </h3>
@@ -277,12 +283,15 @@ const Main = () => {
                                 advocacy campaigns.
                             </p>
                         </div>
-
-                        <img src={Communication} alt='' />
+                        <div className='img-div'>
+                            <img src={Communication} alt='' />
+                        </div>
                     </div>
                     <div className='horizontal'></div>
-                    <div className='solutions'>
-                        <img src={Public} alt='' />
+                    <div className='solutions solution-rev'>
+                        <div className='img-div'>
+                            <img src={Public} alt='' />
+                        </div>
                         <div className='solution-details'>
                             <h3>PUBLIC RELATIONS & STAKEHOLDER
                                 ENGAGEMENT</h3>
@@ -309,12 +318,15 @@ const Main = () => {
                                 managing marketing campaigns.
                             </p>
                         </div>
-
-                        <img src={Marketing} alt='' />
+                        <div className='img-div'>
+                            <img src={Marketing} alt='' />
+                        </div>
                     </div>
                     <div className='horizontal'></div>
-                    <div className='solutions'>
-                        <img src={Etiquette} alt='' />
+                    <div className='solutions solution-rev'>
+                        <div className='img-div'>
+                            <img src={Etiquette} alt='' />
+                        </div>
                         <div className='solution-details'>
                             <h3>ETIQUETTE TRAINING</h3>
                             <p>
@@ -338,12 +350,15 @@ const Main = () => {
                                 with vendors and managing logistics.
                             </p>
                         </div>
-
-                        <img src={Event} alt='' />
+                        <div className='img-div'>
+                            <img src={Event} alt='' />
+                        </div>
                     </div>
                     <div className='horizontal'></div>
-                    <div className='solutions' data-aos="zoom-out">
-                        <img src={Food} alt='' />
+                    <div className='solutions solution-rev' data-aos="zoom-out">
+                        <div className='img-div'>
+                            <img src={Food} alt='' />
+                        </div>
                         <div className='solution-details'>
                             <h3>FOODSTUFFS SUPPLIES
                             </h3>

@@ -49,6 +49,7 @@
   display: none;
   z-index: 10;
   width: 40px;
+  height: 40px;
   font-size: 20px;
   text-align: center;
   align-items: center;
@@ -241,9 +242,17 @@
   margin-top: 30%;
   align-items: center;
   text-align: center;
-  margin-left: 40%;
+  margin-left: 20%;
   color: red;
-  font-size: 22px;
+  font-size: 28px;
+  /* margin: 0 auto;
+  padding: 30px; */
+  width: 60%;
+}
+
+.profile-image .my-slider{
+  text-align: center;
+
 }
 
 .profile-image img:hover {
@@ -856,19 +865,30 @@ textarea {
 
   .bars {
     display: block;
+    font-size: 22px;
+    text-align: center;
   }
 
   .logo-and-bar {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-between;
     width: 100%;
-    font-size: 30px;
+    font-size: 10px;
   }
 
   .logo-and-bar .my-logo {
     width: 60%;
     font-size: 30px;
+    text-align: left;
+  }
+
+  .logo-and-bar .my-logo{
+    font-size: 14px;
+  }
+
+  .logo-and-bar .my-logo img {
+    width: 20%;
   }
 
   .home {
@@ -879,8 +899,8 @@ textarea {
   }
 
   .profile-image {
-    width: 90%;
-    height: 350px;
+    width: 100%;
+    height: 250px;
     text-align: center;
     align-items: center;
     margin: 0;
@@ -892,10 +912,14 @@ textarea {
     padding: 0;
     text-align: center;
     align-items: center;
-    margin-left: 20px;
-    width: 98%;
-    height: 90%;
+    /* margin-left: 20px; */
+    width: 100%;
+    height: 100%;
     /* padding-top: 20px; */
+  }
+
+  .social-media img{
+    width: 100%;
   }
 
   .profile-imag img:hover {
@@ -909,16 +933,33 @@ textarea {
   }
 
   /*about page*/
-  .about-div .my-image {
-    display: none;
+  .about .about-div {
+    flex-direction: column;
+  }
+  .about .my-image {
+    width: 100%;
+    margin: 6px auto;
+    padding: 0;
+    text-align: center;
+  }
+
+  .about .my-image img{
+    width: 96%;
+    text-align: center;
+    margin: 0 auto;
+    margin-right: 10px;
   }
 
   .about-div .about-info {
     width: 98%;
   }
 
+  .about-div .about-info p {
+    font-size: 20px;
+  }
+
   .about .about-header {
-    width: 150px;
+    width: 80%;
   }
 
   /*resume */
@@ -931,25 +972,47 @@ textarea {
     justify-content: space-evenly;
   }
 
-  .resume-header {
-    width: 130px;
+  .resume .resume-header {
+    width: 80%;
+  }
+
+  .resume .solutions {
+    flex-direction: column;
+  }
+
+  .resume .solution-rev {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .resume .solutions .img-div {
+    width: 100%;
+  }
+
+  .resume .solutions .solution-details h3 {
+    font-size: 16px;
+  }
+
+  .resume .solutions .img-div img {
+    width: 100%;
+    height: 90%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* .resume .solutions img {
+    width: 70%;
+    text-align: center;
+    align-items: center;
+  } */
+
+  .resume .solutions .solution-details {
+    width: 100%;
   }
 
   .resume-content .resume-list-content {
     width: 100%;
-  }
-
-  .projects .specific-project,
-  .interests .specific-interest,
-  .work-history div,
-  .skills .skill-specific .js,
-  .skills .skill-specific .react,
-  .skills .skill-specific .node,
-  .skills .skill-specific .css,
-  .skills .skill-specific .html,
-  .skills .skill-specific .sql {
-    width: 100%;
-    margin: 10px 0;
   }
 
   .projects .specific-project {
@@ -977,8 +1040,8 @@ textarea {
     width: 90%;
   }
 
-  .contacts-header {
-    width: 120px;
+  .contacts .contact-header {
+    width: 80%;
   }
 
   .mailing{
