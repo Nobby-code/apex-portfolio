@@ -371,12 +371,13 @@
   margin-top: 14px;
 }
 .about .core-values ul li{
-  list-style: none;
+  /* list-style: none; */
 }
 
 .about .core-values .core-details{
   padding-top: 20px;
   line-height: 2.0;
+  margin: 10px;
 }
 
 .about .vertical {
