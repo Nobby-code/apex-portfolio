@@ -9,7 +9,6 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/effect-fade'
 import 'swiper/css/autoplay'
-// import Profile2 from '../Images/apex3.jpg'
 import Brand from '../Images/brand.jpg'
 import Marketing from '../Images/consumerMarketing.jpg'
 import Communication from '../Images/corporateCommunication.jpg'
@@ -22,7 +21,14 @@ import Public from '../Images/publicRelations.jpg'
 import Profile2 from '../Images/profile.jpg'
 import Logo2 from '../Images/logo2.png'
 import { FaPhoneAlt, FaEnvelope, FaMapMarker, FaTimes, FaBars } from 'react-icons/fa'
-// import { faBullseye } from '@fortawesome/free-solid-svg-icons';
+
+//emailjs
+import emailjs from '@emailjs/browser';
+
+//toast
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Main = () => {
 
@@ -91,7 +97,49 @@ const Main = () => {
         contRef.current.scrollIntoView({ behavior: 'smooth' });
         console.log("clicked");
     }
-    // "my-header hideHeader"
+
+
+    // sending emails through emailjs
+    const form = useRef();
+
+    const sendEmail = (e) => {
+      e.preventDefault();
+  
+      emailjs.sendForm('service_5qvixdu', 'template_caczu9m', form.current, 'user_1BoT1iwLFcc1zKkeGYtFd')
+        .then((result) => {
+            notify()
+            e.target.reset();
+        }, (error) => {
+            notifyFailure();
+        });
+    };
+
+    //toast notification
+    const notify = () => {
+        toast.success('Mail sent successfully!', {
+            position: "top-center",
+            autoClose: 4000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+            });
+    }
+
+    const notifyFailure = () => {
+        toast.error('Message not sent!', {
+            position: "top-center",
+            autoClose: 4000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+            });
+    }
 
     return (
         <div className='container'>
@@ -151,28 +199,15 @@ const Main = () => {
                             </div>
                         </div>
                     </div>
-                    {/* <p className='description-para'>I’m a creative UI/UX designer and web applications developer.
-                        <br />
-                        I also do CRUD backed
-                    </p>
-                    <h4>Let's build something profesional</h4> */}
                     <br />
                     <button onClick={handleContact} className='hire-btn'>Contact Us</button>
                     <br />
                     <br />
                     <div className='social-media'>
-                        {/* <ul className='social-links'>
-                            <li><a href="https://www.facebook.com/gudah.norbert" target="_blank" rel="noreferrer"><em><FaFacebook /></em><span>Facebook</span></a></li>
-                            <li><a href="https://twitter.com/home" target="_blank" rel="noreferrer"><em><FaTwitter /></em><span>Twitter</span></a></li>
-                            <li><a href="https://www.instagram.com/?utm_source=op_m_sd" target="_blank" rel="noreferrer"><em><FaInstagram /></em><span>Instagram</span></a></li>
-                        </ul> */}
                         <img src={Profile2} data-aos="zoom-in" alt='' />
                     </div>
                 </div>
                 <div className='profile-image'>
-                    {/* <img src={Profile} />
-                    <img src={Communication} />
-                    <img src={Public} /> */}
                     <Swiper
                         modules={[Navigation, EffectFade, Pagination, Autoplay]}
                         navigation
@@ -182,7 +217,6 @@ const Main = () => {
                         slidesPerView={2}
                         loop
                         pagination={{ clickable: true }}
-                    //   className='profile-image'
                     >
                         <SwiperSlide className='my-slider'>
                             <h3>Office Supplies</h3>
@@ -385,7 +419,6 @@ const Main = () => {
             </div>
 
             <div ref={contRef} className="contacts page">
-                {/* <h3 className='contacts-header'>Contacts</h3> */}
                 <h4 className='contact-header'>Contact Us</h4>
                 <div className='contacts-content'>
                     <div className='first-cont-info'>
@@ -402,20 +435,14 @@ const Main = () => {
                                 <li>P.O Box 8645-00100, Nairobi, Kenya</li>
                             </ul>
                         </div>
-                        {/* <h3 className='sites-header'>Social sites:</h3> */}
-                        {/* <ul className='social-links'>
-            <li><a href='#' target="_blank" rel="noreferrer"><em><FaFacebook /></em><span>Facebook</span></a></li>
-            <li><a href='#' target="_blank" rel="noreferrer"><em><FaTwitter /></em><span>Twitter</span></a></li>
-            <li><a href='#' target="_blank" rel="noreferrer"><em><FaInstagram /></em><span>Instagram</span></a></li>
-        </ul> */}
                     </div>
                     <div className='mailing'>
                         <h3>Please mail us here</h3>
-                        <form className="contacts-form">
-                            <input type='text' placeholder='Name' required /> <br />
-                            <input type='text' placeholder='Subject' required /> <br />
-                            <input type='email' placeholder='Email' required /> <br />
-                            <textarea cols='50' rows='8' placeholder='Message...' required /> <br />
+                        <form ref={form} onSubmit={sendEmail} className="contacts-form">
+                            <input type='text' placeholder='Name' name="from_name" required /> <br />
+                            {/* <input type='text' placeholder='Subject' name="subject" required /> <br /> */}
+                            <input type='email' placeholder='Email' name="from_email" required /> <br />
+                            <textarea cols='50' rows='8' placeholder='Message...' name="message" required /> <br />
                             <button className="contacts-button">Submit</button>
                         </form>
 
@@ -569,6 +596,7 @@ const Main = () => {
                 </button>
                 <p className='footer-bottom'>Apex Eagle Enterprise Limited &copy; Copyright 2023</p>
             </div>
+            <ToastContainer />
         </div>
     )
 }
