@@ -132,11 +132,6 @@
   border-bottom: 1px solid gray;
 }
 
-.home .personal-det .o-view:hover{
-  /* border-bottom: 1px solid gray; */
-
-}
-
 .home .name{
   color: black;
 }
@@ -369,9 +364,6 @@
 .about .core-values h3{
   color: rgba(9, 36, 158, 0.781);
   margin-top: 14px;
-}
-.about .core-values ul li{
-  /* list-style: none; */
 }
 
 .about .core-values .core-details{
@@ -641,7 +633,7 @@
 
 .resume .solutions .solution-details h3{
   color: rgba(13, 13, 243, 0.904);
-  /* color: #2596be; */
+  color: #2596be;;
 }
 .resume .solutions img{
   text-align: center;
@@ -855,29 +847,38 @@ textarea {
   width: 100px;
   height: 40px;
   margin-bottom: 20px;
-  margin-left: 15px;
+  /* margin-left: 15px; */
   font-weight: bold;
   /* float: right; */
   bottom: 0;
   left: 0;
   background-color: wheat;
+  background-color: #272727;
+  border: none;
+  color: white;
+  font-size: 14px
+}
+
+.footer .footer-bottom {
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: normal;
 }
 
 .scroll-top:hover {
   cursor: pointer;
 }
 
-.footer .footer-div .personal-det {
-  display: none;
-}
-
-.footer .footer-div .my-logo {
-  width: 100%;
-  text-align: center;
-}
 
 
 /*responsive on different screen sizes */
+
+@media screen and (max-width : 360px) {
+    * {
+    font-size: 12px;
+  }
+}
+
 @media screen and (max-width : 480px) {
   .my-header .my-navs {
     display: none;
@@ -1084,6 +1085,30 @@ textarea {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+  }
+
+  .footer .footer-flex {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .footer .footer-flex .footer-div {
+    width: 96%;
+    margin: 8px;
+  }
+
+  .footer .footer-flex .footer-services {
+    width: 96%;
+    margin: 8px;
+  }
+
+  .footer .footer-flex .quick-links {
+    margin: 8px;
+    width: 96%;
+  }
+
+  .footer .footer-flex .quick-links {
+    float: right;
   }
 }
 
@@ -1531,19 +1556,38 @@ textarea {
 .footer {
   /* color: black; */
   text-align: center;
-  font-weight: bold;
-  background-color: #282c34;
+  /* font-weight: bold; */
+  /* background-color: #282c34; */
+  background-color: #272727;
 }
 
-.footer img {
+/* .footer img {
   padding: 10px;
   height: 80px;
   width: 80px;
   border-radius: 50%;
+} */
+
+/* .footer .footer-div .personal-det {
+  display: none;
+}
+
+.footer .footer-div .my-logo {
+  width: 100%;
+  text-align: center;
+} */
+
+.footer-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 30px;
+  text-align: left;
 }
 
 .footer .footer-div {
   padding: 4px;
+  width: 30%;
 }
 
 .footer .footer-div .personal-det {
@@ -1564,14 +1608,97 @@ textarea {
 
 .footer .footer-div {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   text-align: left;
-  font-size: 20px;
+  /* font-size: 20px; */
   /* width: 70%; */
+}
+
+
+.footer-div .footer-det p{
+  color: rgba(255, 255, 255, 0.3);
+}
+.footer-div .my-logo img {
+  border-radius: 50%;
+  width: 15%;
+}
+
+.footer-div .my-logo {
+  margin: 20px;
+}
+
+.footer-flex .readmore {
+  color: wheat;
+  background-color: #272727;
+  border: none;
+  font-size: 16px;
+  padding: 4px;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+
+.footer-flex .readmore:hover {
+  color: #2596be;
+  cursor: pointer;
+}
+
+.footer-flex .footer-services h3, .quick-links h3 {
+  color: #2596be;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.quick-links .footer-navs {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.quick-links .footer-navs a {
+  line-height: 1.7;
+}
+
+.quick-links .footer-navs a:hover {
+  color: wheat;
+  cursor: pointer;
+}
+
+.footer-services ul li {
+  line-height: 1.7;
+  list-style: none;
 }
 
 .footer-bottom {
   background-color: rgb(78, 68, 68);
-  padding: 10px;
+  background-color: black;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.footer-bottom ul li {
+  list-style: none;
+  padding: 5px;
+}
+
+.footer-bottom ul li a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s ease-in;
+}
+
+.footer-bottom ul li a:hover {
+  color: #2596be;
+}
+.footer-bottom ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.footer-bottom span {
+  color: #FF5C58;
 }

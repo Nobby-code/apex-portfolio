@@ -20,7 +20,7 @@ import Supplies from '../Images/officeSupplies.jpg'
 import Public from '../Images/publicRelations.jpg'
 import Profile2 from '../Images/profile.jpg'
 import Logo2 from '../Images/logo2.png'
-import { FaPhoneAlt, FaEnvelope, FaMapMarker, FaTimes, FaBars } from 'react-icons/fa'
+import { FaPhoneAlt, FaEnvelope, FaMapMarker, FaTimes, FaBars, FaArrowRight } from 'react-icons/fa'
 
 //emailjs
 import emailjs from '@emailjs/browser';
@@ -103,15 +103,15 @@ const Main = () => {
     const form = useRef();
 
     const sendEmail = (e) => {
-      e.preventDefault();
-  
-      emailjs.sendForm('service_5qvixdu', 'template_caczu9m', form.current, 'user_1BoT1iwLFcc1zKkeGYtFd')
-        .then((result) => {
-            notify()
-            e.target.reset();
-        }, (error) => {
-            notifyFailure();
-        });
+        e.preventDefault();
+
+        emailjs.sendForm('service_5qvixdu', 'template_caczu9m', form.current, 'user_1BoT1iwLFcc1zKkeGYtFd')
+            .then((result) => {
+                notify()
+                e.target.reset();
+            }, (error) => {
+                notifyFailure();
+            });
     };
 
     //toast notification
@@ -125,7 +125,7 @@ const Main = () => {
             draggable: true,
             progress: undefined,
             theme: "colored",
-            });
+        });
     }
 
     const notifyFailure = () => {
@@ -138,7 +138,7 @@ const Main = () => {
             draggable: true,
             progress: undefined,
             theme: "colored",
-            });
+        });
     }
 
     return (
@@ -554,47 +554,57 @@ const Main = () => {
             </div>
 
             <div className='footer'>
-                <div className='footer-div'>
-                    <div className="my-logo">
-                        <img src={Logo2} alt='' />
-                        <p>APEX EAGLE ENTERPRISE LIMITED</p>
-                    </div>
-
-                    <div className='personal-det'>
-                        <h3 className='name main-name'>COMPANY OVERVIEW</h3>
-                        <br />
-                        <div className='o-view'>
-                            <div>
-                                <div>
-                                    <h4 className='name'><span>Company Name: </span>Apex Eagle Enterprises Limited</h4>
-                                </div>
-                                <br />
-                                <div>
-                                    <h4 className='name'><span>Business Address: </span>P.O BOX 8645-00100, Nairobi, Kenya</h4>
-                                </div>
-                                <br />
-                                <div>
-                                    <h4 className='name'><span>Tel: </span>0733644025</h4>
-                                </div>
-                                <br />
-                                <div>
-                                    <h3 className='name'><span>Email: </span>apexeagleltd@gmail.com</h3>
-                                </div>
-                                <br />
-                                <div>
-                                    <h3 className='name'><span>website: </span>www.apexeagle.com</h3>
-                                </div>
-                            </div>
+                <div className='footer-flex'>
+                    <div className='footer-div'>
+                        <div className="my-logo">
+                            <img src={Logo2} alt='' />
+                            <p>APEX EAGLE ENTERPRISE LIMITED</p>
+                        </div>
+                        <div className='footer-det'>
+                            <p>
+                                Apex Eagle enterprise limited is an integrated marketing communication agency that elevates brands above their competition, delivering marketing and PR services that improves sales, increases brand awareness and grow organizations.
+                            </p>
+                            <button className='readmore'>Read more <FaArrowRight /></button>
                         </div>
                     </div>
+                    <div className='footer-services'>
+                        <h3>Services</h3>
+                        <ul>
+                            <li>Corporate Communications</li>
+                            <li>Brand Management</li>
+                            <li>Digital Marketing</li>
+                            <li>Consumer Marketing</li>
+                            <li>Etiquette Training</li>
+                            <li>Foodstuff supplies</li>
+                        </ul>
+                        <button onClick={handleResume} className='readmore'>Read more <FaArrowRight /></button>
+                    </div>
+                    <div className='quick-links'>
+                        <h3>Quick links</h3>
+                        <nav className="footer-navs" >
+                            <a onClick={handleHome}>Home</a>
+                            <a onClick={handleAbout}>About Me</a>
+                            <a onClick={handleResume}>Services</a>
+                            {/* <a onClick={handleTech}>Technologies</a> */}
+                            <a onClick={handleContact}>Get In Touch</a>
+                            <button onClick={() => window.scrollTo({
+                                left: 0,
+                                top: 0,
+                                behavior: 'smooth',
+                            })} className='scroll-top' >Scroll to top
+                            </button>
+                        </nav>
+                    </div>
                 </div>
-                <button onClick={() => window.scrollTo({
-                    left: 0,
-                    top: 0,
-                    behavior: 'smooth',
-                })} className='scroll-top' >scroll to top
-                </button>
-                <p className='footer-bottom'>Apex Eagle Enterprise Limited &copy; Copyright 2023</p>
+
+                <div className='footer-bottom'>
+                    <p>Copyright &copy; 2023 All Rights Reserved | <span>Apex Eagle Enterprise Limited </span></p>
+                    <ul>
+                        <li><a href='#'>Terms</a></li>
+                        <li><a href='#'>Privacy</a></li>
+                        <li><a href='#'>Compliances</a></li>
+                    </ul>
+                </div>
             </div>
             <ToastContainer />
         </div>
