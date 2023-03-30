@@ -1670,7 +1670,7 @@ textarea {
   list-style: none;
 }
 
-.footer-bottom {
+.footer .footer-bottom {
   background-color: rgb(78, 68, 68);
   background-color: black;
   padding: 30px;
