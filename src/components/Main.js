@@ -174,7 +174,7 @@ const Main = () => {
             </div>
             <div ref={homeRef} className="home page">
                 <div className='personal-det'>
-                    <h3 className='name'>COMPANY OVERVIEW</h3>
+                    {/* <h3 className='name'>COMPANY OVERVIEW</h3>
                     <br />
                     <div className='o-view'>
                         <div>
@@ -199,13 +199,24 @@ const Main = () => {
                             </div>
                         </div>
                     </div>
-                    <br />
+                    <br /> */}
+
+                    <div>
+                        <h2>Apex Eagle Enterprise Limited</h2>
+                        <p>
+                            Focusing on providing Enterprise Level services, we cater
+                            to the needs of our customers by creating customized
+                            solutions. We build longstanding trust relationships,
+                            because we study carefully, implement fast and support
+                            responsibly even the most demanding scenarios.
+                        </p>
+                    </div>
                     <button onClick={handleContact} className='hire-btn'>Contact Us</button>
                     <br />
                     <br />
-                    <div className='social-media'>
+                    {/* <div className='social-media'>
                         <img src={Profile2} data-aos="zoom-in" alt='' />
-                    </div>
+                    </div> */}
                 </div>
                 <div className='profile-image'>
                     <Swiper
@@ -238,6 +249,7 @@ const Main = () => {
             <div ref={resumeRef} className="page resume">
                 <h4 className='resume-header'>Our Solutions</h4>
                 <div className='sol'>
+                    <input id="ch" type="checkbox" />
                     <div className='solutions'>
                         <div className='solution-details'>
                             <h3>CORPORATE COMMUNICATIONS</h3>
@@ -270,151 +282,155 @@ const Main = () => {
                         </div>
                     </div>
                     <div className='horizontal1'></div>
-                    <div className='solutions' data-aos="zoom-in">
-                        <div className='solution-details'>
-                            <h3>DIGITAL MARKETING</h3>
-                            <p>
-                                Apex helps businesses reach their target audience
-                                through online channels such as social media, search
-                                engines, and email marketing. It includes creating
-                                digital advertising campaigns, managing social media
-                                accounts, and developing content marketing
-                                strategies.
-                            </p>
+                    <div className='show-more'>
+                        <div className='solutions' data-aos="zoom-in">
+                            <div className='solution-details'>
+                                <h3>DIGITAL MARKETING</h3>
+                                <p>
+                                    Apex helps businesses reach their target audience
+                                    through online channels such as social media, search
+                                    engines, and email marketing. It includes creating
+                                    digital advertising campaigns, managing social media
+                                    accounts, and developing content marketing
+                                    strategies.
+                                </p>
+                            </div>
+                            <div className='img-div'>
+                                <img src={Digital} alt="" />
+                            </div>
                         </div>
-                        <div className='img-div'>
-                            <img src={Digital} alt="" />
-                        </div>
-                    </div>
-                    <div className='horizontal'></div>
-                    <div className='solutions solution-rev'>
-                        <div className='img-div'>
-                            <img src={Public} alt="" />
-                        </div>
-                        <div className='solution-details'>
-                            <h3>MEDIA RELATIONS & MOBILIZATION
-                            </h3>
-                            <p>
-                                Apex helps businesses interact with the media and
-                                mobilize their audiences to achieve their
-                                communication goals. It includes developing media
-                                relations strategies, conducting media outreach, and
-                                organizing media events.
-                            </p>
-                        </div>
+                        <div className='horizontal'></div>
+                        <div className='solutions solution-rev'>
+                            <div className='img-div'>
+                                <img src={Public} alt="" />
+                            </div>
+                            <div className='solution-details'>
+                                <h3>MEDIA RELATIONS & MOBILIZATION
+                                </h3>
+                                <p>
+                                    Apex helps businesses interact with the media and
+                                    mobilize their audiences to achieve their
+                                    communication goals. It includes developing media
+                                    relations strategies, conducting media outreach, and
+                                    organizing media events.
+                                </p>
+                            </div>
 
-                    </div>
-                    <div className='horizontal'></div>
-                    <div className='solutions'>
-                        <div className='solution-details'>
-                            <h3>POLICY COMMUNICATION</h3>
-                            <p>
-                                We help businesses communicate their policy
-                                positions to various stakeholders, including
-                                government officials, industry associations, and the
-                                public. It includes developing policy positions,
-                                creating advocacy strategies, and organizing
-                                advocacy campaigns.
-                            </p>
                         </div>
-                        <div className='img-div'>
-                            <img src={Communication} alt='' />
+                        <div className='horizontal'></div>
+                        <div className='solutions'>
+                            <div className='solution-details'>
+                                <h3>POLICY COMMUNICATION</h3>
+                                <p>
+                                    We help businesses communicate their policy
+                                    positions to various stakeholders, including
+                                    government officials, industry associations, and the
+                                    public. It includes developing policy positions,
+                                    creating advocacy strategies, and organizing
+                                    advocacy campaigns.
+                                </p>
+                            </div>
+                            <div className='img-div'>
+                                <img src={Communication} alt='' />
+                            </div>
                         </div>
-                    </div>
-                    <div className='horizontal'></div>
-                    <div className='solutions solution-rev'>
-                        <div className='img-div'>
-                            <img src={Public} alt='' />
+                        <div className='horizontal'></div>
+                        <div className='solutions solution-rev'>
+                            <div className='img-div'>
+                                <img src={Public} alt='' />
+                            </div>
+                            <div className='solution-details'>
+                                <h3>PUBLIC RELATIONS & STAKEHOLDER
+                                    ENGAGEMENT</h3>
+                                <p>
+                                    Apex helps businesses build and maintain
+                                    relationships with their stakeholders, including
+                                    customers, employees, investors, and the media. It
+                                    includes developing communication strategies,
+                                    creating engaging content, and managing
+                                    stakeholder relationships.
+                                </p>
+                            </div>
                         </div>
-                        <div className='solution-details'>
-                            <h3>PUBLIC RELATIONS & STAKEHOLDER
-                                ENGAGEMENT</h3>
-                            <p>
-                                Apex helps businesses build and maintain
-                                relationships with their stakeholders, including
-                                customers, employees, investors, and the media. It
-                                includes developing communication strategies,
-                                creating engaging content, and managing
-                                stakeholder relationships.
-                            </p>
+                        <div className='horizontal'></div>
+                        <div className='solutions'>
+                            <div className='solution-details'>
+                                <h3>CONSUMER MARKETING</h3>
+                                <p>
+                                    Apex helps businesses promote their products and
+                                    services to consumers through various marketing
+                                    channels, including advertising, promotions, and
+                                    content marketing. It includes developing marketing
+                                    strategies, creating marketing materials, and
+                                    managing marketing campaigns.
+                                </p>
+                            </div>
+                            <div className='img-div'>
+                                <img src={Marketing} alt='' />
+                            </div>
                         </div>
-                    </div>
-                    <div className='horizontal'></div>
-                    <div className='solutions'>
-                        <div className='solution-details'>
-                            <h3>CONSUMER MARKETING</h3>
-                            <p>
-                                Apex helps businesses promote their products and
-                                services to consumers through various marketing
-                                channels, including advertising, promotions, and
-                                content marketing. It includes developing marketing
-                                strategies, creating marketing materials, and
-                                managing marketing campaigns.
-                            </p>
-                        </div>
-                        <div className='img-div'>
-                            <img src={Marketing} alt='' />
-                        </div>
-                    </div>
-                    <div className='horizontal'></div>
-                    <div className='solutions solution-rev'>
-                        <div className='img-div'>
-                            <img src={Etiquette} alt='' />
-                        </div>
-                        <div className='solution-details'>
-                            <h3>ETIQUETTE TRAINING</h3>
-                            <p>
-                                We help individuals and businesses learn how to
-                                behave professionally in various social and business
-                                situations. It includes teaching proper etiquette for
-                                networking, business meetings, and social events.
-                            </p>
-                        </div>
+                        <div className='horizontal'></div>
+                        <div className='solutions solution-rev'>
+                            <div className='img-div'>
+                                <img src={Etiquette} alt='' />
+                            </div>
+                            <div className='solution-details'>
+                                <h3>ETIQUETTE TRAINING</h3>
+                                <p>
+                                    We help individuals and businesses learn how to
+                                    behave professionally in various social and business
+                                    situations. It includes teaching proper etiquette for
+                                    networking, business meetings, and social events.
+                                </p>
+                            </div>
 
+                        </div>
+                        <div className='horizontal'></div>
+                        <div className='solutions'>
+                            <div className='solution-details'>
+                                <h3>EVENT MANAGEMENT</h3>
+                                <p>
+                                    Apex helps businesses plan and execute events,
+                                    including conferences, product launches, and
+                                    corporate parties. It includes event planning,
+                                    budgeting, and execution, as well as coordinating
+                                    with vendors and managing logistics.
+                                </p>
+                            </div>
+                            <div className='img-div'>
+                                <img src={Event} alt='' />
+                            </div>
+                        </div>
+                        <div className='horizontal'></div>
+                        <div className='solutions solution-rev' data-aos="zoom-out">
+                            <div className='img-div'>
+                                <img src={Food} alt='' />
+                            </div>
+                            <div className='solution-details'>
+                                <h3>FOODSTUFFS SUPPLIES
+                                </h3>
+                                <p>
+                                    Non-perishable foods, also known as "shelf-stable"
+                                    foods, are items that can be safely stored at room
+                                    temperature. In order for perishable foods such as
+                                    vegetables to become non-perishable, they need to
+                                    be dried or treated by heat to destroy any foodborne
+                                    bugs that could lead to spoilage or cause an illness.
+                                    Then, this food can be packaged in sterile, airtight
+                                    containers such as cans. It's worth noting that
+                                    preservation of these items is crucial; all foods will
+                                    eventually spoil if they have not been properly
+                                    preserved. No matter where you live, what your
+                                    financial situation looks like, or how safe you think
+                                    your home is, it never hurts to stock up on all the
+                                    items on a basic list of non-perishable foods.
+                                </p>
+                            </div>
+                        </div>
+                        <div className='horizontal'></div>
+                        <label for="ch">Show less</label>
                     </div>
-                    <div className='horizontal'></div>
-                    <div className='solutions'>
-                        <div className='solution-details'>
-                            <h3>EVENT MANAGEMENT</h3>
-                            <p>
-                                Apex helps businesses plan and execute events,
-                                including conferences, product launches, and
-                                corporate parties. It includes event planning,
-                                budgeting, and execution, as well as coordinating
-                                with vendors and managing logistics.
-                            </p>
-                        </div>
-                        <div className='img-div'>
-                            <img src={Event} alt='' />
-                        </div>
-                    </div>
-                    <div className='horizontal'></div>
-                    <div className='solutions solution-rev' data-aos="zoom-out">
-                        <div className='img-div'>
-                            <img src={Food} alt='' />
-                        </div>
-                        <div className='solution-details'>
-                            <h3>FOODSTUFFS SUPPLIES
-                            </h3>
-                            <p>
-                                Non-perishable foods, also known as "shelf-stable"
-                                foods, are items that can be safely stored at room
-                                temperature. In order for perishable foods such as
-                                vegetables to become non-perishable, they need to
-                                be dried or treated by heat to destroy any foodborne
-                                bugs that could lead to spoilage or cause an illness.
-                                Then, this food can be packaged in sterile, airtight
-                                containers such as cans. It's worth noting that
-                                preservation of these items is crucial; all foods will
-                                eventually spoil if they have not been properly
-                                preserved. No matter where you live, what your
-                                financial situation looks like, or how safe you think
-                                your home is, it never hurts to stock up on all the
-                                items on a basic list of non-perishable foods.
-                            </p>
-                        </div>
-                    </div>
-                    <div className='horizontal'></div>
+                    <label for="ch">Read More</label>
                 </div>
             </div>
 
@@ -422,7 +438,7 @@ const Main = () => {
                 <h4 className='contact-header'>Contact Us</h4>
                 <div className='contacts-content'>
                     <div className='first-cont-info'>
-                        <h2>For Enquiries, please get in touch with us...</h2>
+                        <h2>GET INT TOUCH</h2>
                         <div className='my-contact'>
                             <ul className='my-contact-icons'>
                                 <li><FaPhoneAlt /></li>
@@ -437,12 +453,16 @@ const Main = () => {
                         </div>
                     </div>
                     <div className='mailing'>
-                        <h3>Please mail us here</h3>
+                        <h3>Send us Email</h3>
                         <form ref={form} onSubmit={sendEmail} className="contacts-form">
-                            <input type='text' placeholder='Name' name="from_name" required /> <br />
+                            <label for="from_name" >Name</label> <br />
+                            <input type='text' placeholder='Type Name' name="from_name" required /> <br />
+                            <label for="from_email" >Email</label> <br />
                             {/* <input type='text' placeholder='Subject' name="subject" required /> <br /> */}
-                            <input type='email' placeholder='Email' name="from_email" required /> <br />
-                            <textarea cols='50' rows='8' placeholder='Message...' name="message" required /> <br />
+                            <input type='email' placeholder='Type your Email' name="from_email" required /> <br />
+                            <label for="message" >Message</label> <br />
+                            <textarea cols='50' rows='8' placeholder='Leave Message here...' name="message" required /> <br />
+
                             <button className="contacts-button">Submit</button>
                         </form>
 
@@ -521,6 +541,7 @@ const Main = () => {
                 <div className='my-image'>
                     <img src={Public} alt="" data-aos="zoom-in" />
                 </div>
+                <input id="chkbx" type="checkbox" />
                 <div className='core-values'>
                     <div className='vertical'></div>
                     <div className='core-details'>
@@ -548,8 +569,10 @@ const Main = () => {
                         <div>
                             We have great financial capability to handle projects which require large capital outlay.
                         </div>
+                        <label for="chkbx">Show less</label>
                     </div>
                 </div>
+                <label for="chkbx">Read more</label>
 
             </div>
 
