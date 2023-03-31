@@ -20,7 +20,7 @@ import Supplies from '../Images/officeSupplies.jpg'
 import Public from '../Images/publicRelations.jpg'
 import Profile2 from '../Images/profile.jpg'
 import Logo2 from '../Images/logo2.png'
-import { FaPhoneAlt, FaEnvelope, FaMapMarker, FaTimes, FaBars, FaArrowRight } from 'react-icons/fa'
+import { FaPhoneAlt, FaEnvelope, FaMapMarker, FaTimes, FaBars, FaArrowRight, FaFax } from 'react-icons/fa'
 
 //emailjs
 import emailjs from '@emailjs/browser';
@@ -420,8 +420,38 @@ const Main = () => {
 
             <div ref={contRef} className="contacts page">
                 <h4 className='contact-header'>Contact Us</h4>
+                <div className='contacts-boxes'>
+                    <div className='box'>
+                        <span>
+                            <FaMapMarker />
+                        </span>
+                        <h3>OUR MAIN OFFICE</h3>
+                        <p>P.O Box 8645-00100, Nairobi, Kenya</p>
+                    </div>
+                    <div className='box'>
+                        <span>
+                            <FaPhoneAlt />
+                        </span>
+                        <h3>PHONE NUMBER</h3>
+                        <p>0733644025</p>
+                    </div>
+                    <div className='box'>
+                        <span>
+                            <FaFax />
+                        </span>
+                        <h3>FAX</h3>
+                        <p>0733644025</p>
+                    </div>
+                    <div className='box'>
+                        <span>
+                        <FaEnvelope />
+                        </span>
+                        <h3>EMAIL</h3>
+                        <p>apexeagleltd@gmail.com</p>
+                    </div>
+                </div>
                 <div className='contacts-content'>
-                    <div className='first-cont-info'>
+                    {/* <div className='first-cont-info'>
                         <h2>For Enquiries, please get in touch with us...</h2>
                         <div className='my-contact'>
                             <ul className='my-contact-icons'>
@@ -435,14 +465,24 @@ const Main = () => {
                                 <li>P.O Box 8645-00100, Nairobi, Kenya</li>
                             </ul>
                         </div>
+                    </div> */}
+                    <div className='contact-init'>
+                        <h2>GET IN TOUCH</h2>
+                        {/* <h5>For Enquiries, please get in touch with us...</h5> */}
+                        <h4>We have a visionary focus to strategically develop enterprise as the key drive for increased economic opportunities.</h4>
+                        <p>For any inquiries or in need of our service, please rich out at your own convenience</p>
+
                     </div>
                     <div className='mailing'>
                         <h3>Please mail us here</h3>
                         <form ref={form} onSubmit={sendEmail} className="contacts-form">
-                            <input type='text' placeholder='Name' name="from_name" required /> <br />
+                            <label for="from_name">Name</label> <br />
+                            <input type='text' placeholder='Enter your name' name="from_name" required /> <br />
                             {/* <input type='text' placeholder='Subject' name="subject" required /> <br /> */}
-                            <input type='email' placeholder='Email' name="from_email" required /> <br />
-                            <textarea cols='50' rows='8' placeholder='Message...' name="message" required /> <br />
+                            <label for="from_email">Email</label> <br />
+                            <input type='email' placeholder='Enter your Email' name="from_email" required /> <br />
+                            <label for="message">Message</label><br />
+                            <textarea cols='50' rows='8' placeholder='Type Message...' name="message" required /> <br />
                             <button className="contacts-button">Submit</button>
                         </form>
 
