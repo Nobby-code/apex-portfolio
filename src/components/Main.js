@@ -18,7 +18,6 @@ import Event from '../Images/eventManagement.jpg'
 import Food from '../Images/foodStuff.jpg'
 import Supplies from '../Images/officeSupplies.jpg'
 import Public from '../Images/publicRelations.jpg'
-import Profile2 from '../Images/profile.jpg'
 import Logo2 from '../Images/logo2.png'
 import { FaPhoneAlt, FaEnvelope, FaMapMarker, FaTimes, FaBars, FaArrowRight } from 'react-icons/fa'
 

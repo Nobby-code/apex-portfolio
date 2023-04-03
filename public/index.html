@@ -25,10 +25,48 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Apex Eagle Enterprise Limited</title>
+    <style>
+      .loading {
+        -webkit-animation: sk-scaleout 1s infinite ease-in-out;
+        animation: sk-scaleout 1s infinite ease-in-out;
+        background-color: blue;
+        border-radius: 100%;
+        height: 4em;
+        width: 4em;
+      }
+
+      .spinner-container {
+        align-items: center;
+        background-color: white;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        width: 100vw;
+      }
+
+      @keyframes sk-scaleout {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+
+        100% {
+          -webkit-transform: scale(1);
+          opacity: 0.5;
+          transform: scale(1);
+        }
+
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+      <div id="spinner", class="spinner-container">
+        <div class="loading"></div>
+        <div>Loading...</div>
+      </div>
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
